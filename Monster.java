@@ -83,7 +83,7 @@ public class Monster
    new Monster ("B.A. The Dragon", 10, 10, 10, "Dragon Breath", "Physical"),
    new Monster ("Sun o' vavich", 50, 60, 70, "Arrrghh"),
    new Monster ("HU Roach", 80, 4, 8, "Existing"),
-   new Monster ("Zombie Drumpf", 100, 80, 30, "Make america brains again"),
+   new Monster ("Zombie Drumpf", 100, 80, 30, "Eat American Brains again..."),
    };
   
   // Sends Monster to main method
