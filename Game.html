@@ -20,20 +20,28 @@
                                                  "\nOnce known as the United States of America now known as the United States of Trump" +
                                                  "\nThe world is a shadow of its former self full of mutants, giant creatures, and general ner do wells" +
                                                  "\n So....... should be fun, good luck");
-            document.write("<applet code='Game.java' height=100% width=100%></applet>");
+            
             };
+            
         
     </script>
         <a>trumpCard</a>
     </head>
     <link rel="stylesheet" type="text/css" href="openingPage.css" media="screen"/>
 <body id="startpage">
+    <script src="http://www.java.com/js/deployJava.js"></script>
+<script>
+    var attributes = {
+        code:'Game.java',
+    width:700, height:500} ;
+    var parameters = {}; // does the Applet take parameters?
+    var version = '1.6' ; // does the Applet require a minimum version of Java
+    deployJava.runApplet(attributes, parameters, version);
+</script>
+    
     <div class="buttonholder">
         <button class="button" onclick= 'loadApplet();' >START</button>
     </div>
  </body>
     
 </html>
-
-
-
