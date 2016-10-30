@@ -1,9 +1,16 @@
+import java.util.*;
+
 public class Hero
 {
    private String name;
-   private int hitpoints;
-   private int level;
+   
+   private int maxHealth;
+   private int hitpoints;   
    private int baseDamage;
+   private int damage;
+   private int speed;
+   private int level;
+   
    private int Vitality;
    private int Strength;
    private int Intelligence;
@@ -12,68 +19,56 @@ public class Hero
    public Hero(String name)
    {
       this.name = name;
-      hitpoints = 10;
+      maxHealth = 10;
+      hitpoints = maxHealth;
+      
       baseDamage = 2;
+      damage = baseDamage;
       Vitality = 1;
       Strength = 1;
       Intelligence = 1;
       Agility = 1;
    }
+   
+   public int heroMaxHealth()
+   {
+   return maxHealth();
+   }
+   
+   public int heroHealth()
+   {
+      return hitpoints;
+   }
+   
+   public int heroSpeed()
+   {
+      return speed;
+   }
 
-   public void useConsumable(Consumables consumable)
+   public int takeDamage(int dmg)
+   {
+      return hitpoints - dmg;
+   }
+
+   public int damage()
+   {
+      return damage;
+   }
+   
+   public void useConsumable(Consumable consumable)
    {
    
    }
 
-   public void equipWeapon(Weapons weapon)
+   // Equips 
+   public void equipWeapon(Weapon weapon)
    {
-   
+    damage += weapon.Damage();
+    speed += weapon.Speed();
    }
 
    public void equipArmor(Armor armor)
    {
    
-   }
-
-   public int takeDamage(int dmg)
-   {
-      return hitpoitns - dmg;
-   }
-
-   public int attack()
-   {
-      return modifiedDamage();
-   }
-
-
-
-
-
-
-
-
-   static class ProtoGauntlet
-   {
-      String element;
-   
-      public int GreekFlame()
-      {
-      
-      }
-   
-      public int AbsZeroBlast()
-      {
-      
-      }
-   
-      public int LightStrike()
-      {
-      
-      }
-   
-      public int ZuesStrike()
-      {
-      
-      }
-   }
+   }  
 }
