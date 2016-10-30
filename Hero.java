@@ -1,79 +1,102 @@
+import java.util.*;
+
 public class Hero
 {
    private String name;
-   private int hitpoints;
-   private int level;
+   
+   private int maxHealth;
+   private int hitpoints;   
    private int baseDamage;
+   private int damage;
+   private int speed;
+   private int level;
+   
    private int Vitality;
    private int Strength;
    private int Intelligence;
-   private int Agility;
+   private int Agility;   
 
    public Hero(String name)
    {
       this.name = name;
-      hitpoints = 10;
+      maxHealth = 10;
+      hitpoints = maxHealth;
+      
       baseDamage = 2;
+      damage = baseDamage;
       Vitality = 1;
       Strength = 1;
       Intelligence = 1;
       Agility = 1;
    }
-
-   public void useConsumable(Consumables consumable)
-   {
    
+   public int heroMaxHealth()
+   {
+      return maxHealth;
    }
-
-   public void equipWeapon(Weapons weapon)
-   {
    
+   public int heroHealth()
+   {
+      return hitpoints;
    }
-
-   public void equipArmor(Armor armor)
-   {
    
+   public int heroSpeed()
+   {
+      return speed;
    }
 
    public int takeDamage(int dmg)
    {
-      return hitpoitns - dmg;
+      return hitpoints - dmg;
    }
 
-   public int attack()
+   public int damage()
    {
-      return modifiedDamage();
+      return damage;
    }
 
-
-
-
-
-
-
-
-   static class ProtoGauntlet
+   private boolean weaponEquipped;
+   private boolean armorEquipped;
+   private Weapon currentWeapon;
+   private Armor currentArmor;
+   
+   public void equipWeapon(int weaponIndex)
+   {   
+      if (weaponEquipped == false){
+         Weapon currentWeapon = Inventory.getWeapon(weaponIndex);
+         damage += currentWeapon.damage;
+         speed += currentWeapon.speed;
+         equipped = true;
+      }
+      else{
+      
+         damage -= currentWeapon.damage;
+         speed -= currentWeapon.speed;
+      
+         currentWeapon = Inventory.getWeapon(weaponIndex);
+         damage += currentWeapon.damage;
+         speed += currentWeapon.speed;
+         equipped = true;
+      }   
+   }
+      
+   public void equipArmor(Armor armor)
    {
-      String element;
-   
-      public int GreekFlame()
-      {
-      
+      if (armorEquipped == false){
+         Weapon currentWeapon = Inventory.getWeapon(weaponIndex);
+         damage += currentWeapon.damage;
+         speed += currentWeapon.speed;
+         equipped = true;
       }
-   
-      public int AbsZeroBlast()
-      {
+      else{
       
-      }
-   
-      public int LightStrike()
-      {
+         damage -= currentWeapon.damage;
+         speed -= currentWeapon.speed;
       
-      }
-   
-      public int ZuesStrike()
-      {
-      
-      }
+         currentWeapon = Inventory.getWeapon(weaponIndex);
+         damage += currentWeapon.damage;
+         speed += currentWeapon.speed;
+         equipped = true;
+      }  
    }
 }
