@@ -87,7 +87,7 @@ public class Monster
    };
   
   // Sends Monster to main method
-   static Monster getMonster(int monsterIndex) {
+   public static Monster getMonster(int monsterIndex) {
       Monster current = monsters[monsterIndex];
       return new Monster(current.Name, current.hitPoints, current.damage, current.speed, current.attack, current.weakness);
    }

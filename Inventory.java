@@ -23,11 +23,16 @@ public class Inventory
       
    public Weapon getWeapon(int itemIndex)
    {
-   return weapons.get(itemIndex);
+      return weapons.get(itemIndex);
    }
    
    public Armor getArmor(int itemIndex)
    {
-   return armors.get(itemIndex);
+      return armors.get(itemIndex);
+   }
+   
+   public Consumable getConsumable(int itemIndex)
+   {
+      return consumables.get(itemIndex);
    }
 }
