@@ -1,0 +1,27 @@
+.buttonholder{
+    text-align: center;
+    margin: 20%;
+}
+.button {
+    background-color: black;
+    border: none;
+    color: greenyellow;
+    padding: auto;
+    text-align: center;
+    font-size: 70px;
+    font-family: monospace;
+}
+#startpage {
+    background-color: black;
+    padding: 0;
+    height: 100%;
+    width 100%;
+}
+a{
+    color: red;
+    text-align: center;
+    border: center;
+    font-size: 35px;
+    font-family: serif;
+    font-style: bold;
+}
