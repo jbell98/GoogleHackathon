@@ -10,6 +10,13 @@ private class Weapons {
     speed = spd;
     attack = atk
   }
+  /*public String getName() {
+    return this.name
+  }
+  
+  public String getDamage() {
+    return this.name
+  }*/
   
 static Weapons[] weapon = [
   new Weapons(
@@ -28,4 +35,5 @@ static Weapons[] weapon = [
   "Short Sword", 3, 0, "Slash";
   "Long Sword", 5, -2, "Slash";
   )]
+  
 }
